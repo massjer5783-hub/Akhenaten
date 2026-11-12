@@ -638,3 +638,4 @@ eventmsg_fr = [
   { key: PHRASE_pyramid_speedup_Seth, text: "Seth" }
   { key: PHRASE_pyramid_speedup_Bast, text: "Bastet" }
 ]
+
