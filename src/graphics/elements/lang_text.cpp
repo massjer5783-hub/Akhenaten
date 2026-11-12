@@ -201,6 +201,12 @@ namespace {
 
 #if defined(GAME_PLATFORM_ANDROID)
 bool lang_android_load_localization_base_en_direct(pcstr path) {
+    const auto current_lang = lang_get_current_language();
+    bstring256 expected;
+    expected.printf(":%s.js", current_lang.base_table.c_str());
+    if (strcmp(expected.c_str(), path) != 0) {
+        return true;
+    }
     return android_load_localization_base_en_direct(path);
 }
 #endif
